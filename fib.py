@@ -29,3 +29,8 @@ def fibrepr(n):
             else:
                 break
     return fib_iter(n, Fibonacci(0), '')
+
+if __name__ == '__main__':
+    from sys import argv
+    for i in range(1, (int(argv[1]) + 1) if len(argv) > 1 else 21):
+        print "%d:" % i, list(fibrepr(i))
